@@ -38,5 +38,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.BOOK_DEPLOY_KEY }}
-          external_repository: bevy-cheatbook/bevy-cheatbook.github.io
+          external_repository: Noirkelo/noirkelo.github.io
           publish_dir: ./book
