@@ -33,10 +33,14 @@ jobs:
       - run: mdbook build
 
       - run: cp ./robots.txt ./book/
-
+      - name: Setup assets
+        run: |
+          mkdir public
+          mv ./book ./public/
       - name: Deploy to Github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.BOOK_DEPLOY_KEY }}
           external_repository: Noirkelo/noirkelo.github.io
-          publish_dir: ./book
+          publish_dir: ./public
+          keepFiles: true
