@@ -41,4 +41,4 @@ jobs:
           deploy_key: ${{ secrets.BOOK_DEPLOY_KEY }}
           external_repository: Noirkelo/noirkelo.github.io
           publish_dir: ./public
-          keepFiles: true
+          keep_files: true
